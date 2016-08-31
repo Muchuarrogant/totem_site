@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   
   get "vision" => "pages#vision"
   get "pratique" => "pages#pratique"
+  get "billetterie" => "pages#billetterie"
 
   
   resources :pins do

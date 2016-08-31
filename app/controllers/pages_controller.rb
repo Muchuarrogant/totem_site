@@ -9,4 +9,7 @@ class PagesController < ApplicationController
   def pratique
   end
   
+  def billetterie
+  end
+
 end
