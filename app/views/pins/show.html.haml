@@ -29,7 +29,7 @@
               - if current_user == @pin.admin
                 = link_to "Edit", edit_pin_path(@pin), class: "btn btn-default"
                 = link_to "Delete", pin_path(@pin), method: :delete, data: {confirm: " Etes vous sure?"}, class: "btn btn-danger"
-              - elsif @pin.has_participant(current_user)
+              - elsif current_user and @pin.has_participant(current_user) 
                 = link_to "Stop participating", stop_participating_pin_path(@pin), method: :patch, class: "btn btn-danger"
               - else
                 = link_to "Participate", participate_pin_path(@pin), method: :patch, class: "btn btn-success"
